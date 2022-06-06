@@ -1,0 +1,43 @@
+h1 {
+    color: blue;
+}
+
+hr {
+    border: 1px ridge blue;
+    border-radius: 100vw;
+
+}
+
+img {
+    height: 250px;
+    float: right;
+    margin: 0 50px 0 0;
+}
+
+.questions {
+    float: left;
+    margin: 0 50px 20px 0;
+}
+
+
+.answers {
+    float: left;
+    margin: 0;
+
+}
+
+.profile {
+    clear: both;
+}
+
+
+.time {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+    width: 120px;
+}
+
+.ghost {
+    width: 50px;
+}

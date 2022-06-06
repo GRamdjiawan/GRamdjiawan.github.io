@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: black;
+  color: black;
+}
+
+html::-webkit-scrollbar {
+  width: .9vw;
+
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #E6E6E6;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #C5A880;
+}
+
+body {
+  background-color: #C5A880;
+  color: black;
+}
+
+div {
+  /* border: 1px solid white; */
+}
+
+nav {
+  /* border: 1px solid white; */
+
+  background-color: #E6E6E6;
+
+  box-shadow: 10px 0px 10px black;
+}
+
+p,
+a,
+button {
+  font-family: 'Noto Serif JP', serif;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  -webkit-text-stroke: 1px white;
+
+}
+
+a:hover {
+  color: white;
+
+}
+
+#project-page {
+  background-color: #C5A880;
+  background-attachment: fixed;
+  background-clip: content-box;
+
+}
+
+
+
+.hide {
+  display: none;
+}
+
+
+.h1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* home screen */
+
+.img-me {
+  height: 400px;
+  filter: grayscale(1);
+  box-shadow: 1px 1px 5px black;
+}
+
+.title {
+  color: #000;
+
+
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #000;
+
+
+}
+
+.dropdown-menu {
+  background-color: rgb(255, 255, 255, .75);
+
+}
+
+.dropdown-menu li a {
+  color: #000;
+
+}
+
+
+
+.about-me {
+  background-color: #E6E6E6;
+}
+
+.about-me-content {
+  box-shadow: 1px 1px 5px black;
+
+}
+
+.contact {
+  background-color: #C5A880;
+}
+
+.carousel {
+  border: 1px solid white;
+}
