@@ -27,12 +27,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pokemon.css">
+    <script src="../../js/main.js" defer></script>
+    <script src="../../js/projects/pokemon.js" defer></script>
 
-    <link rel="shortcut icon" href="./img/logo-portfolio-png.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/logo-portfolio-png.svg" type="image/x-icon">
 
-    <title>Protfolio: Gianni Ramdjiawan</title>
+    <title>Project: Pokemon</title>
 
     <meta name="description"
         content="Welcome to my portfolio. My name is Gianni Ramdjiawan and this started as a school project but now it has become my opus magnum.">
@@ -66,7 +68,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark mx-0 p-4 border-bottom border-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./img/logo-portfolio-png.svg" alt="" width="200" height="200">
+                    <img src="../../img/logo-portfolio-png.svg" alt="" width="200" height="200">
 
                 </a>
 
@@ -76,13 +78,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="../../index.html">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#project-page">Projects</a>
+                            <a class="nav-link" href="../../index.html#project-page">Projects</a>
                         </li>
 
                     </ul>
@@ -93,61 +95,61 @@
 
         </nav>
 
-        <img src="./img/wavetop.svg" alt="" class="img-fluid">
+        <img src="../../img/wave.svg" alt="" class="img-fluid">
 
 
-        <div class="row about-me">
-            <div class="col-md-6 m-0 ">
-                <div class="about-me-content p-3 mx-4 d-flex flex-column justify-content-center align-items-center">
-                    <h2 class="display-4">About me</h2>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 d-flex justify-content-center align-items-center flex-column">
+                <h2 class="display-4 mb-5">Pokedex</h2>
 
-                    <div class="ghost p-5">
+                <div class="pokeCard">
+
+                    <div class="pokeDetails">
+                        <div class="name-container d-flex justify-content-between align-items-center p-3">
+                            <b><span class="name">Name</span></b>
+                            <span class="index">Number</span>
+
+                        </div>
+
+                        <img src="../../img/whos-that-pokemon.jpg" alt=""
+                            class="img-fluid carousel d-flex justify-content-center align-items-center">
+                        <div class="pokeinfo">
+
+
+                            <span class="types d-flex justify-content-between align-items-center">
+                                <span class="type1">Type 1</span>
+                                <span class="type2">Type 2</span>
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <br>
+
+
+                    <div class="button-container d-flex justify-content-around align-items-center">
+                        <button class="btn back"><i class="bi bi-arrow-left-circle fs-4"></i></button>
+                        <button class="btn next"><i class="bi bi-arrow-right-circle fs-4"></i></button>
 
                     </div>
 
-                    <p class="text-break fs-4 p-5">
-                        My name is Gianni Ramdjiawan,
-                        I'm a <span class="age"></span>-year old student.
-                        I love to learn new things. My motto is: as quick and
-                        efficient possible. When I start something I'll do
-                        anything to finish it.
-                        <br><br>
-                        This is my <a href="./html/cv.html" class="text-dark"><b>cv</b></a>.
-                    </p>
-                </div>
-            </div>
+                    <div class="inputPokemon d-flex justify-content-center align-items-center">
 
-            <div class="col-md-6 p-5 m-0 d-flex justify-content-center align-items-center">
-                <img src="./img/foto-van-zelf.jpeg" alt="Gianni Ramdjiawan" class="img-fluid img-me">
-            </div>
+                        <input type="text" class="choosePokemon text-center" placeholder="Kies een pokedex nummer"
+                            onchange="pickPokemon()">
 
-        </div>
+                        <!-- <button class="submit">Submit</button> -->
 
-        <div class="row " id="project-page">
-            <img src="./img/wave.svg" alt="wave" class="p-0 ">
-            <div class="col-md-12 text-center">
-                <h2 class="display-4 mb-5">Projects</h2>
-
-                <div class="projects-container d-flex justify-content-evenly align-items-center">
-
-                    <button class="btn back">
-
-                        <i class="bi bi-arrow-bar-left fs-1"></i>
-
-                    </button>
-
-                    <div class="projects-content">
 
                     </div>
 
-                    <button class="btn next">
-                        <i class="bi bi-arrow-bar-right fs-1"></i>
-                    </button>
 
                 </div>
 
             </div>
-            <img src="./img/wavetop.svg" alt="wave" class="p-0">
+            <div class="col-md-2"></div>
+            <img src="../../img/wavetop.svg" alt="wave" class="p-0">
 
 
         </div>
