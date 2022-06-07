@@ -1,0 +1,10 @@
+.card {
+    background-color: transparent;
+    border: 1px solid;
+    box-shadow: 1px 1px 5px black;
+
+}
+
+.btn {
+    background-color: #E6E6E6;
+}

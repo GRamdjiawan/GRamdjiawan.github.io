@@ -10,7 +10,7 @@ hr {
 
 img {
     height: 250px;
-    float: right;
+    /* float: right; */
     margin: 0 50px 0 0;
 }
 
@@ -25,11 +25,6 @@ img {
     margin: 0;
 
 }
-
-.profile {
-    clear: both;
-}
-
 
 .time {
     display: flex;
