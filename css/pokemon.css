@@ -6,9 +6,9 @@ input {
 
 .pokeCard {
     border: 1px solid;
-    height: fit-content;
+    height: 100%;
     width: 300px;
-
+    background-color: red;
     box-shadow: 1px 1px 5px black;
 }
 
@@ -25,7 +25,6 @@ input {
 }
 
 .carousel {
-    height: fit-content;
     width: 100%;
 }
 
