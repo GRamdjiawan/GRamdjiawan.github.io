@@ -71,6 +71,21 @@ h4 {
 
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
 .h1 {
   font-family: 'Oswald', sans-serif;
   text-align: center;
@@ -78,7 +93,6 @@ h4 {
 }
 
 /* home screen */
-
 .img-me {
   height: 400px;
   filter: grayscale(1);
@@ -87,27 +101,19 @@ h4 {
 
 .title {
   color: #000;
-
-
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #000;
-
-
 }
 
 .dropdown-menu {
   background-color: rgb(255, 255, 255, .75);
-
 }
 
 .dropdown-menu li a {
   color: #000;
-
 }
-
-
 
 .about-me {
   background-color: #E6E6E6;
@@ -115,19 +121,15 @@ h4 {
 
 .about-me-content {
   box-shadow: 1px 1px 5px black;
-
 }
 
 .contact {
   background-color: #C5A880;
 }
 
-
-
 .projects-container {
   width: 100%;
   height: 450px;
-
   /* background-color: aqua; */
 }
 
@@ -143,7 +145,6 @@ h4 {
 
 .active {
   display: flex;
-
 }
 
 .projects-content {
