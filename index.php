@@ -1,6 +1,11 @@
+<?php
+    session_start();
+    $_SESSION['load'] = true;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +33,6 @@
     <meta name="description"
         content="Welcome to my portfolio. My name is Gianni Ramdjiawan and this started as a school project but now it has become my opus magnum.">
 </head>
-
 <body>
     <div class="container-fluid px-0 overflow-hidden home-page pofo" id="home-page">
         <div class="row contact">
@@ -51,7 +55,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark mx-0 p-4 border-bottom border-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">
+                <a class="navbar-brand" href="./index.php">
                     <img src="./img/logo-portfolio-png.svg" alt="Gianni Ramdjiawan" class="noselect" width="200"
                         height="200">
                 </a>
@@ -65,7 +69,7 @@
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#project-page">Projects</a>
+                            <a class="nav-link" href="index.php#project-page">Projects</a>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +80,7 @@
             <div class="col-md-6 m-0  d-flex justify-content-center align-items-center">
                 <div class="about-me-content p-3 mx-4  d-flex flex-column justify-content-center align-items-center">
                     <h2 class="display-4">About me</h2>
-                    <p class="text-break fs-4 p-5">
+                    <p class="text-break fs-4 p-5 about-me-text">
                         My name is Gianni Ramdjiawan,
                         I'm a <span class="age"></span>-year old student
                         who loves to learn new things. My motto is: as quick and
@@ -116,5 +120,4 @@
         </div>
     </div>
 </body>
-
 </html>
