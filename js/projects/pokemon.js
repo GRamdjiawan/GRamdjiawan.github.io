@@ -8,8 +8,10 @@ const pokeType1 = document.querySelector('.type1');
 const pokeType2 = document.querySelector('.type2');
 let pokeIndex = 0;
 
+inputPokemon = document.querySelector('.choosePokemon');
+inputPokemon.addEventListener('change', pickPokemon)
+
 function pickPokemon() {
-    const inputPokemon = document.querySelector('.choosePokemon');
     pokeIndex = inputPokemon.value;
     console.log(pokeIndex);
     api()
@@ -19,6 +21,9 @@ function nextApi() {
     nextButton.addEventListener('click', () => {
         api();
         pokeIndex++;
+        if (pokeIndex >= 898) {
+            pokeIndex = 0;
+        }
     });
 }
 
@@ -27,7 +32,7 @@ function prevApi() {
         api();
         pokeIndex--;
         if (pokeIndex < 0) {
-            pokeIndex = 0;
+            pokeIndex = 898;
         }
     });
 }

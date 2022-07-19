@@ -1,12 +1,14 @@
 [
     {
-        "img": "pokemon.png",
+        "img": "pokemon logo.png",
         "title": "Who's That Pokemon?",
-        "html": "pokemon.html"
+        "html": "pokemon.html",
+        "position": "center"
     },
     {
         "img": "1sta.png",
         "title": "1st Airborne",
-        "html": "1sta.html"
+        "html": "1sta.html",
+        "position": "bottom"
     }
 ]

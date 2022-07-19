@@ -36,7 +36,7 @@ async function carousel() {
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)), url('./img/projects/${projects[i].img}');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom;
+        background-position: ${projects[i].position};
         background-attachment: scroll;">
             <h4>${projects[i].title}</h4>
             <button class="btn project-btn">
