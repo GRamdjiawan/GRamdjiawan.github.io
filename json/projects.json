@@ -3,12 +3,15 @@
         "img": "pokemon logo.png",
         "title": "Who's That Pokemon?",
         "html": "pokemon.html",
-        "position": "center"
+        "position": "center",
+        "tiny": false
     },
     {
         "img": "1sta.png",
         "title": "1st Airborne",
         "html": "1sta.html",
-        "position": "bottom"
+        "position": "bottom",
+        "tiny": true,
+        "tinyImg": "logo-1stA.png"
     }
 ]

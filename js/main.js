@@ -1,4 +1,3 @@
-
 function calcAge() {
     const birthDay = new Date('June 7 2005');
     let today = new Date();
@@ -22,6 +21,16 @@ function clickProject(projects) {
     });
 }
 
+function checkScreenWidth() {
+    const screenWidth = screen.width;
+
+    if (screenWidth <= 600) {
+        return true;
+    } else {
+        return false
+    }
+}
+
 async function carousel() {
     const url = './json/projects.json';
     const getJSON = await fetch(url);
@@ -31,19 +40,39 @@ async function carousel() {
     const projectDOM = document.querySelector('.projects-content');
     let index = 0;
     for (let i = 0; i < projects.length; i++) {
-        projectDOM.innerHTML += `
-        <div class="projects  justify-content-center align-items-center flex-column hide" style="
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)), url('./img/projects/${projects[i].img}');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: ${projects[i].position};
-        background-attachment: scroll;">
-            <h4>${projects[i].title}</h4>
-            <button class="btn project-btn">
-            <i class="bi bi-plus-circle-fill fs-4" style="color: white;"></i>
-            </button>
-            <i class="bi bi-arrow-up fs-4 arrow" style="color: white;"></i>
-        </div>`
+
+        if (projects[i].tiny && checkScreenWidth) {
+            projectDOM.innerHTML += `
+            <div class="projects  justify-content-center align-items-center flex-column hide" style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)), url('./img/projects/${projects[i].tinyImg}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: ${projects[i].position};
+            background-attachment: scroll;">
+                <h4>${projects[i].title}</h4>
+                <button class="btn project-btn">
+                <i class="bi bi-plus-circle-fill fs-4" style="color: white;"></i>
+                </button>
+                <i class="bi bi-arrow-up fs-4 arrow" style="color: white;"></i>
+            </div>`
+
+            console.log(projects[i].tinyImg);
+
+        } else {
+            projectDOM.innerHTML += `
+            <div class="projects  justify-content-center align-items-center flex-column hide" style="
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)), url('./img/projects/${projects[i].img}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: ${projects[i].position};
+            background-attachment: scroll;">
+                <h4>${projects[i].title}</h4>
+                <button class="btn project-btn">
+                <i class="bi bi-plus-circle-fill fs-4" style="color: white;"></i>
+                </button>
+                <i class="bi bi-arrow-up fs-4 arrow" style="color: white;"></i>
+            </div>`
+        }
     };
 
     let project = document.querySelectorAll('.projects');
@@ -75,3 +104,4 @@ async function carousel() {
 
 calcAge();
 carousel();
+
