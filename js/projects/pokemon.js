@@ -1,5 +1,6 @@
 const imgPlace = document.querySelector('.carousel');
 const backButton = document.querySelector('.back');
+const shuffleBtn = document.querySelector('.shuffle')
 const nextButton = document.querySelector('.next');
 const submit = document.querySelector('.submit');
 const pokeName = document.querySelector('.name');
@@ -19,8 +20,8 @@ function pickPokemon() {
 
 function nextApi() {
     nextButton.addEventListener('click', () => {
-        api();
         pokeIndex++;
+        api();
         if (pokeIndex >= 898) {
             pokeIndex = 0;
         }
@@ -29,11 +30,18 @@ function nextApi() {
 
 function prevApi() {
     backButton.addEventListener('click', () => {
-        api();
         pokeIndex--;
+        api();
         if (pokeIndex < 0) {
-            pokeIndex = 898;
+            pokeIndex = 899;
         }
+    });
+}
+
+function shufflePokemon() {
+    shuffleBtn.addEventListener('click', () => {
+        pokeIndex = Math.floor(Math.random() * 898);
+        api();
     });
 }
 
@@ -41,7 +49,9 @@ async function api() {
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeIndex}/`;
     const getJson = await fetch(url);
     const imgAPI = await getJson.json();
+
     console.log(imgAPI);
+
     imgPlace.setAttribute('src', imgAPI.sprites.front_default);
     pokeName.innerHTML = imgAPI.name.toUpperCase();
     pokeNumber.innerHTML = `Pokedex entry <b>${imgAPI.id}</b>`;
@@ -56,3 +66,4 @@ async function api() {
 api();
 nextApi();
 prevApi();
+shufflePokemon();

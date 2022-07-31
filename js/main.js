@@ -6,8 +6,8 @@ function calcAge() {
 
     if (today.getMonth() >= birthDay.getMonth() && today.getDate() >= birthDay.getDate()) {
         htmlAge.textContent = age;
-    } else {
-        htmlAge.textContent = age - 1;
+    } else if (today.getMonth() >= birthDay.getMonth() || today.getDate() >= birthDay.getDate()) {
+        htmlAge.textContent = age;
     }
 }
 
@@ -38,10 +38,12 @@ async function carousel() {
     const backButton = document.querySelector('.back');
     const nextButton = document.querySelector('.next');
     const projectDOM = document.querySelector('.projects-content');
+    let project;
     let index = 0;
+
     for (let i = 0; i < projects.length; i++) {
 
-        if (projects[i].tiny && checkScreenWidth) {
+        if (projects[i].tiny == true && checkScreenWidth() == true) {
             projectDOM.innerHTML += `
             <div class="projects  justify-content-center align-items-center flex-column hide" style="
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)), url('./img/projects/${projects[i].tinyImg}');
@@ -55,9 +57,6 @@ async function carousel() {
                 </button>
                 <i class="bi bi-arrow-up fs-4 arrow" style="color: white;"></i>
             </div>`
-
-            console.log(projects[i].tinyImg);
-
         } else {
             projectDOM.innerHTML += `
             <div class="projects  justify-content-center align-items-center flex-column hide" style="
@@ -66,16 +65,15 @@ async function carousel() {
             background-size: cover;
             background-position: ${projects[i].position};
             background-attachment: scroll;">
-                <h4>${projects[i].title}</h4>
-                <button class="btn project-btn">
-                <i class="bi bi-plus-circle-fill fs-4" style="color: white;"></i>
-                </button>
-                <i class="bi bi-arrow-up fs-4 arrow" style="color: white;"></i>
+            <h4>${projects[i].title}</h4>
+            <button class="btn project-btn">
+            <i class="bi bi-plus-circle-fill fs-4" style="color: white;"></i>
+            </button>
+            <i class="bi bi-arrow-up fs-4 arrow" style="color: white;"></i>
             </div>`
         }
     };
-
-    let project = document.querySelectorAll('.projects');
+    project = document.querySelectorAll('.projects');
     backButton.addEventListener('click', () => {
         index--;
         project[index + 1].classList.remove('active');
@@ -86,7 +84,6 @@ async function carousel() {
         }
         project[index].classList.add('active');
     });
-
     nextButton.addEventListener('click', () => {
         index++;
         project[index - 1].classList.remove('active');
@@ -96,7 +93,6 @@ async function carousel() {
         }
         project[index].classList.add('active');
     });
-
     project[index].classList.add('active');
     // this callback gives the html of the page that is going to be visited
     clickProject(projects);

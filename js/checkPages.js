@@ -1,13 +1,3 @@
-export function checkScreenWidth() {
-    const screenWidth = screen.width;
-
-    if (screenWidth <= 600) {
-        return true;
-    } else {
-        return false
-    }
-}
-
 async function checkUrl(path, url) {
     let JSONUrl = `${path}json/pages.json`;
     const getJSON = await fetch(JSONUrl);
