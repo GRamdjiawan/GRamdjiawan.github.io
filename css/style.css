@@ -15,7 +15,6 @@
 
 html::-webkit-scrollbar {
   width: .9vw;
-
 }
 
 html::-webkit-scrollbar-thumb {
@@ -37,9 +36,7 @@ div {
 
 nav {
   /* border: 1px solid white; */
-
   background-color: #E6E6E6;
-
   box-shadow: 10px 0px 10px black;
 }
 
@@ -47,7 +44,6 @@ p,
 a,
 button {
   font-family: 'Noto Serif JP', serif;
-
 }
 
 a {
@@ -57,11 +53,12 @@ a {
 
 .contact-link:hover {
   -webkit-text-stroke: 1px white;
-
 }
 
 a:hover {
-  color: white;
+  color: black !important;
+  font-weight: bolder;
+  text-decoration: underline;
 
 }
 

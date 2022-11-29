@@ -7,7 +7,7 @@ const pokeName = document.querySelector('.name');
 const pokeNumber = document.querySelector('.index')
 const pokeType1 = document.querySelector('.type1');
 const pokeType2 = document.querySelector('.type2');
-let pokeIndex = 0;
+let pokeIndex = 1;
 
 inputPokemon = document.querySelector('.choosePokemon');
 inputPokemon.addEventListener('change', pickPokemon)
