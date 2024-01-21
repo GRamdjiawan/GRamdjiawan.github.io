@@ -2,12 +2,13 @@ function calcAge() {
     const birthDay = new Date('June 7 2005');
     let today = new Date();
     let age = today.getFullYear() - birthDay.getFullYear();
+    console.log(age)
     const htmlAge = document.querySelector('.age');
 
     if (today.getMonth() >= birthDay.getMonth() && today.getDate() >= birthDay.getDate()) {
         htmlAge.textContent = age;
-    } else if (today.getMonth() >= birthDay.getMonth() || today.getDate() >= birthDay.getDate()) {
-        htmlAge.textContent = age;
+    } else if (today.getMonth() < birthDay.getMonth() || today.getDate() < birthDay.getDate()) {
+        htmlAge.textContent = age - 1;
     }
 }
 
